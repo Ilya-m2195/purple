@@ -1,0 +1,13 @@
+@import 'src/mixins/font-style';
+
+.btn {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.count {
+  padding-top: 3px;
+
+  @include font-style(400, 12px, 15.4px, var(--gray6e));
+}
