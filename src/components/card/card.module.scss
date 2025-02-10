@@ -1,0 +1,73 @@
+@import 'src/mixins/font-style';
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.imgContainer {
+  margin-bottom: 16px;
+  padding: 10px 30px;
+  background-color: var(--light-blue);
+  border-radius: 5px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.infoWrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.jobTitle {
+  @include font-style(400, 12px, 16.3px, var(--gray4b));
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  background: var(--gray6e);
+  border-radius: 50%;
+}
+
+.timeLine {
+  @include font-style(400, 12px, 16.3px, var(--gray6e));
+}
+
+.title {
+  margin-bottom: 6px;
+  text-align: left;
+
+  @include font-style(700, 18px, 24.5px);
+}
+
+.description {
+  margin-bottom: 21px;
+
+  @include font-style(400, 14px, 21px);
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.timeLinkContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
