@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from './page.module.scss';
+import styles from './mainLayout.module.scss';
 import { Card } from '@/components';
 
 const Home: FC = () => {

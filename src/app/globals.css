@@ -44,3 +44,9 @@ ul {
   --light-blue: #e5f4ff;
   --black30: #303030;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
