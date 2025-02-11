@@ -4,10 +4,27 @@
   display: flex;
   gap: 2px;
   align-items: center;
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .count {
   padding-top: 3px;
 
   @include font-style(400, 12px, 15.4px, var(--gray6e));
+}
+
+.borderBtn {
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid var(--black30);
+  border-radius: 50%;
+}
+
+.bgBlack {
+  background-color: var(--black30);
+  svg {
+    stroke: #fff;
+  }
 }
