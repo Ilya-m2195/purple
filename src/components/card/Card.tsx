@@ -28,7 +28,10 @@ export const Card: FC = () => {
             <div className={styles.dot}> </div>
             <span className={styles.timeLine}>1 месяц назад</span>
           </div>
-          <CustomBtn count={4} Icon={<Like />} viewType={'primary'} />
+          <div>
+            <CustomBtn Icon={<Like />} viewType={'circle'} />
+            <CustomBtn count={4} Icon={<Like />} viewType={'primary'} />
+          </div>
         </div>
 
         <Title className={styles.title} Tag={'h2'}>
@@ -44,7 +47,6 @@ export const Card: FC = () => {
           <ArrowLink link={'#'}>Читать</ArrowLink>
         </div>
       </div>
-      <CustomBtn Icon={<Like />} viewType={'circle'} />
     </>
   );
 };
