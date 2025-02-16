@@ -1,0 +1,20 @@
+@import 'src/mixins/font-style';
+
+.mainContainer {
+  margin: 0 auto;
+  align-content: center;
+  max-width: 1126px;
+  padding: 22px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 23px 10px;
+  margin-bottom: 25px;
+}
+.headerText {
+  @include font-style(300, 40px, 54.5px, black);
+}
