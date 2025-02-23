@@ -1,0 +1,41 @@
+@import 'src/mixins/font-style';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 612px;
+  padding-right: 15px;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid rgba(40, 40, 40, 0.16);
+  border-radius: 8px;
+  padding: 18px 0 18px 29px;
+
+  &::placeholder {
+    @include font-style(400, 15px, 21px, var(--gray6e));
+  }
+  &:focus {
+    outline: 2px solid var(--blue);
+    border-radius: 8px;
+  }
+}
+
+.textarea {
+  resize: none;
+}
+
+.formBtn {
+  padding: 14px 44px;
+  border-radius: 8px;
+  @include font-style(700, 15px, 21px, var(--background));
+  background: var(--black30);
+  transition: .2s all;
+  &:focus {
+    outline: 2px solid var(--blue);
+    border-radius: 8px;
+  }
+}

@@ -4,10 +4,13 @@ import Link from 'next/link';
 import Like from 'public/like.svg';
 import styles from './card.module.scss';
 import { Title, CustomBtn, ArrowLink } from '@/components';
+import { CARD_TITLE } from '@/constants';
 
-const CARD_TITLE = 'Как работать с CSS Grid';
+interface Props {
+  id: string;
+}
 
-export const Card: FC = () => {
+export const Card: FC<Props> = ({ id }) => {
   return (
     <>
       <div className={styles.cardContainer}>
@@ -29,7 +32,6 @@ export const Card: FC = () => {
             <span className={styles.timeLine}>1 месяц назад</span>
           </div>
           <div>
-            <CustomBtn Icon={<Like />} viewType={'circle'} />
             <CustomBtn count={4} Icon={<Like />} viewType={'primary'} />
           </div>
         </div>
@@ -44,7 +46,7 @@ export const Card: FC = () => {
         </p>
         <div className={styles.timeLinkContainer}>
           <span className={styles.timeLine}>3 минуты</span>
-          <ArrowLink link={'#'}>Читать</ArrowLink>
+          <ArrowLink link={`/card/${id}`}>Читать</ArrowLink>
         </div>
       </div>
     </>

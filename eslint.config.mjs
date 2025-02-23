@@ -100,7 +100,7 @@ export default [
         2,
         {
           namedComponents: 'arrow-function',
-          unnamedComponents: 'arrow-function',
+          // unnamedComponents: 'arrow-function',
         },
       ],
       'react/jsx-props-no-spreading': [

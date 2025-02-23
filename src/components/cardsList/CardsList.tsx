@@ -1,13 +1,7 @@
 import { FC } from 'react';
 import styles from './cardsList.module.scss';
 import { Card } from '@/components';
-
-interface IPost {
-  userId: string;
-  id: string;
-  title: string;
-  body: string;
-}
+import { IPost } from '@/types';
 
 const getPostsData = async (): Promise<Array<IPost> | null> => {
   const data = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
@@ -30,7 +24,7 @@ export const CardsList: FC = async () => {
     <ul className={styles.cardsList}>
       {data.map(post => (
         <li className={styles.cardsItem} key={post.id}>
-          <Card />
+          <Card id={post.id} />
         </li>
       ))}
     </ul>
