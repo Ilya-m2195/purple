@@ -1,0 +1,14 @@
+@import "src/mixins/font-style";
+
+.backBtn {
+  margin-bottom: 20px;
+  padding: 14px 44px;
+  border-radius: 8px;
+  @include font-style(700, 15px, 21px, var(--background));
+  background: var(--black30);
+  transition: .2s all;
+  &:focus {
+    outline: 2px solid var(--blue);
+    border-radius: 8px;
+  }
+}

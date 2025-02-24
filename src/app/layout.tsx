@@ -3,8 +3,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Open_Sans } from 'next/font/google';
 import Link from 'next/link';
-import GitHubIcon from 'public/gitHubIcon.svg';
 import styles from './mainLayout.module.scss';
+import { GitHubLink } from '@/components/gitHubLink/GitHubLink';
+import { LinkProvider } from '@/providers/LinkProvider';
 
 const openSans = Open_Sans({
   weight: ['400', '700'],
@@ -27,9 +28,9 @@ const RootLayout: FC<
         <div className={styles.mainContainer}>
           <header className={styles.header}>
             <span className={styles.headerText}>.my_blog</span>
-            <Link href={'#'}>
-              <GitHubIcon />
-            </Link>
+            <LinkProvider>
+              <GitHubLink />
+            </LinkProvider>
           </header>
           {children}
         </div>
