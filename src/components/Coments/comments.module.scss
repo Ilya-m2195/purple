@@ -1,0 +1,33 @@
+@import 'src/mixins/font-style';
+
+.subTitle {
+  @include font-style(700, 28px, 38px);
+  margin-bottom: 20px;
+}
+
+.personalBlock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 7px;
+}
+
+.name {
+  @include font-style(700, 12px, 16.4px);
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  background: var(--gray6e);
+  border-radius: 50%;
+}
+
+.mail {
+  @include font-style(400, 12px, 16.3px, var(--gray6e));
+}
+
+.comment {
+  @include font-style(400, 16px, 28px);
+  margin-bottom: 23px;
+}

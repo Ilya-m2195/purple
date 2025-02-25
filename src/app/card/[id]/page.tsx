@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Like from 'public/like.svg';
 import styles from './page.module.scss';
-import { BackBtn, CustomBtn, FormComponent, Title } from '@/components';
+import { BackBtn, Comments, CustomBtn, FormComponent, Title } from '@/components';
 import { CARD_TITLE } from '@/constants';
 import { IPost } from '@/types';
 
@@ -69,18 +69,7 @@ const CardPage: FC<Props> = async ({ params }: Props) => {
       <div className={styles.likeBlock}>
         <span>Понравилось? Жми </span> <CustomBtn Icon={<Like />} viewType={'circle'} />
       </div>
-      <Title Tag={'h3'} className={styles.subTitle}>
-        Комментарии
-      </Title>
-      <div className={styles.personalBlock}>
-        <span className={styles.name}>Василий Пупкин</span>
-        <div className={styles.dot}></div>
-        <span className={styles.timeLine}>pupkin@gmail.com</span>
-      </div>
-      <p className={styles.comment}>
-        Отличная статья, но не хватает информации о том, как лучше реализовать на гридах
-        более сложные конструкции, например layout для интернет магазина.
-      </p>
+      <Comments id={cardId} />
       <FormComponent />
     </>
   );
