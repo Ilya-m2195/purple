@@ -6,3 +6,4 @@ export * from './cardsList/CardsList';
 export * from './backBtn/BackBtn';
 export * from './formComponent/FormComponent';
 export * from './Coments/Comments';
+export * from '@/components/notification/Notification';

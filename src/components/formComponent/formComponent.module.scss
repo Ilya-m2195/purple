@@ -28,6 +28,15 @@
   resize: none;
 }
 
+.errorBorder {
+  outline: 2px solid var(--red);
+  transition: .2s all;
+}
+
+.errorMessage {
+  @include font-style(700, 15px, 21px, var(--red));
+}
+
 .formBtn {
   padding: 14px 44px;
   border-radius: 8px;

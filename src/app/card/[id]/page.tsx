@@ -70,7 +70,7 @@ const CardPage: FC<Props> = async ({ params }: Props) => {
         <span>Понравилось? Жми </span> <CustomBtn Icon={<Like />} viewType={'circle'} />
       </div>
       <Comments id={cardId} />
-      <FormComponent />
+      <FormComponent id={cardId} />
     </>
   );
 };

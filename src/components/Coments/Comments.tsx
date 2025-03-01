@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styles from './comments.module.scss';
+import { API } from '@/api/api';
 import { Title } from '@/components';
 import { IComment } from '@/types';
 
@@ -8,7 +9,7 @@ interface Props {
 }
 
 const getComments = async (id: string): Promise<Array<IComment> | null> => {
-  const data = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`);
+  const data = await fetch(`${API.URL}/comments?postId=${id}`);
 
   console.log(JSON.stringify(data), 'id');
   if (!data.ok) {
