@@ -43,6 +43,9 @@ ul {
   --blue: #1473e6;
   --light-blue: #e5f4ff;
   --black30: #303030;
+  --red: #cf1b1b;
+  --redLight: #f07373;
+  --green: #6ef093;
 }
 
 .header {

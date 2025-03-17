@@ -1,0 +1,25 @@
+@import 'src/mixins/font-style';
+
+
+.wrapper {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font-style(400, 15px, 21px, var(--black));
+  min-width: 150px;
+  min-height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.errorWrapper {
+  background: var(--redLight);
+}
+
+.successWrapper {
+  background: var(--green);
+}

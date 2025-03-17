@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import styles from './cardsList.module.scss';
+import { API } from '@/api/api';
 import { Card } from '@/components';
 import { IPost } from '@/types';
 
 const getPostsData = async (): Promise<Array<IPost> | null> => {
-  const data = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
+  const data = await fetch(`${API.URL}/posts?_limit=5`);
 
   if (!data.ok) {
     return null;
