@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Form from 'next/form';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -27,6 +27,12 @@ export const FormComponent: FC<Props> = ({ id }) => {
     formState: { errors },
     reset,
   } = useForm<IFormData>();
+
+  useEffect(() => {
+    return () => {
+      reset();
+    };
+  }, []);
 
   const onSubmit: SubmitHandler<IFormData> = async (data): Promise<void> => {
     try {
